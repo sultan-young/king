@@ -10,6 +10,8 @@ const State = {
     hurt: 3,
 }
 
+const SPEED = 80;
+
 cc.Class({
     extends: cc.Component,
 
@@ -29,6 +31,10 @@ cc.Class({
         //         this._bar = value;
         //     }
         // },
+        player: {
+            default: null,
+            type: cc.Node
+        }
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -36,12 +42,13 @@ cc.Class({
     onLoad () {
         this.hp = 5;
         // 基础移速
-        this._speed = 80;
         this.sp = cc.v2(0,0);
         
         this.isHit = false;
         this.ani = this.node.getChildByName('body').getComponent(cc.Animation)
         this.rb = this.node.getComponent(cc.RigidBody);
+
+        console.log(this.player.x, this.node.x)
 
         this.ani.on('finished', (e, data) => {
             this.hp--;
@@ -62,5 +69,17 @@ cc.Class({
 
     },
 
-    // update (dt) {},
+    update (dt) {
+        const heroX = this.player.x;
+        // 怪物的移动速率
+        this.lv = this.rb.linearVelocity;
+
+        if (heroX >= this.node.x) {
+            this.sp.x = 1;
+        } else {
+            this.sp.x = -1;
+        }
+        this.lv.x = SPEED *  this.sp.x;
+        this.rb.linearVelocity = this.lv;
+    },
 });

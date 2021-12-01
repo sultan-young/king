@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "e37ef6ca-2cd5-47bc-96f5-f0704e2c6a3b",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "point",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 43,
+  "height": 37,
+  "platformSettings": {},
+  "subMetas": {
+    "Skeleton_Attack_13": {
+      "ver": "1.0.6",
+      "uuid": "3d5b49f2-9125-4e24-8a5c-6e458a001c96",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "e37ef6ca-2cd5-47bc-96f5-f0704e2c6a3b",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 1.5,
+      "offsetY": -7.5,
+      "trimX": 7,
+      "trimY": 15,
+      "width": 32,
+      "height": 22,
+      "rawWidth": 43,
+      "rawHeight": 37,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "hurt",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.8,
+  "sample": 10,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "7de2f9fa-90db-40ca-8ea9-95de70f721e2"
+            }
+          },
+          {
+            "frame": 0.1,
+            "value": {
+              "__uuid__": "45dad9e6-a789-47fe-9862-9164378cb22f"
+            }
+          },
+          {
+            "frame": 0.2,
+            "value": {
+              "__uuid__": "ec076a8e-5d8d-4cea-b360-8b4e94844692"
+            }
+          },
+          {
+            "frame": 0.3,
+            "value": {
+              "__uuid__": "48af7226-9167-4e05-a53f-dbc1c0c93eac"
+            }
+          },
+          {
+            "frame": 0.4,
+            "value": {
+              "__uuid__": "c6ea9e98-e9c2-44cc-a719-cbf74db36697"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "4b69b525-6417-4c33-a451-a80d66ffc607"
+            }
+          },
+          {
+            "frame": 0.6,
+            "value": {
+              "__uuid__": "5d898959-64c5-4ae5-85bd-4b01da355e49"
+            }
+          },
+          {
+            "frame": 0.7,
+            "value": {
+              "__uuid__": "7684247c-18a3-4c09-b13a-40183571a7de"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

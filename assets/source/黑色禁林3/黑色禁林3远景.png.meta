@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "160d171d-7347-4f8f-8be3-018276bc6702",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 2160,
+  "height": 750,
+  "platformSettings": {},
+  "subMetas": {
+    "黑色禁林3远景": {
+      "ver": "1.0.6",
+      "uuid": "0189d17c-7d75-40e5-a102-637691cc5706",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "160d171d-7347-4f8f-8be3-018276bc6702",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 181,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 2160,
+      "height": 388,
+      "rawWidth": 2160,
+      "rawHeight": 750,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

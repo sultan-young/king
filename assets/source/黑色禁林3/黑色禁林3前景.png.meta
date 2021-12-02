@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "a4c70c95-0ff1-4989-b005-eeabc44f8c15",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 2160,
+  "height": 750,
+  "platformSettings": {},
+  "subMetas": {
+    "黑色禁林3前景": {
+      "ver": "1.0.6",
+      "uuid": "977a7093-a941-4a90-94fd-e2a0d6395c65",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "a4c70c95-0ff1-4989-b005-eeabc44f8c15",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -289.5,
+      "trimX": 0,
+      "trimY": 579,
+      "width": 2160,
+      "height": 171,
+      "rawWidth": 2160,
+      "rawHeight": 750,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

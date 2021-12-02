@@ -1967,7 +1967,9 @@
       "__id__": 48
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "1257ac94-b9b6-4d39-a4ce-9fdf1d097594"
+    },
     "_clips": [
       {
         "__uuid__": "1257ac94-b9b6-4d39-a4ce-9fdf1d097594"
@@ -2006,7 +2008,7 @@
         "__uuid__": "2fb8edb2-6110-4f03-bf72-23e08b861b81"
       }
     ],
-    "playOnLoad": false,
+    "playOnLoad": true,
     "_id": "aeHWDM9ZpL67pku8yhUgM5"
   }
 ]

@@ -44,6 +44,7 @@ cc.Class({
         this.heroState = State.stand;
         this.anima = 'idle';
         // this.heroAni = this.node.getComponent(cc.Animation);
+        console.log(this.node.getComponent(cc.RigidBody))
         this.heroAni = this.node.getChildByName('body').getComponent(cc.Animation);
         // 获取刚体，控制sprite速度
         this.rb = this.node.getComponent(cc.RigidBody);

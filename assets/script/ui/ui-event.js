@@ -28,29 +28,14 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad () {
-        
-        cc.systemEvent.on('keydown', this.onKeydown, this);
-        cc.systemEvent.on('keyup', this.onKeyup, this);
-    },
-    onDestroy() {
-        cc.systemEvent.off('keydown', this.onKeydown, this);
-        cc.systemEvent.off('keyup', this.onKeyup, this);
-    },
-    onKeydown(e) {
-        if (e.keyCode === cc.macro.KEY.a) {
-            console.log('往左走')
-            this.node.setPosition(cc.Vec2(this.node.x - 5, this.node.y))
-        } else if(e.keyCode === cc.macro.KEY.d) {
-            console.log('往右走')
-            this.node.setPosition(cc.Vec2(this.node.x + 5, this.node.y))
-        }
-        console.log(e.keyCode, this.node, this.node.setPosition)
-    },
-    onKeyup(e) {
-    },
+    // onLoad () {},
 
     start () {
+
+    },
+    openUi(event, data) {
+        console.log(data)
+
     },
 
     // update (dt) {},

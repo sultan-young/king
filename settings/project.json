@@ -1,7 +1,7 @@
 {
   "group-list": [
     "default",
-    "hero",
+    "UI",
     "wall",
     "enemy",
     "character"

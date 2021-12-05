@@ -1202,7 +1202,7 @@
         "__id__": 23
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 27

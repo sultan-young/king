@@ -30,7 +30,6 @@ cc.Class({
 
     onLoad () {
         // cc.director
-
         cc.director.getCollisionManager().enabled = true;
         cc.director.getCollisionManager().enabledDebugDraw = true;
         cc.director.getPhysicsManager().enabled = true;

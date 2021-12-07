@@ -1,14 +1,8 @@
-import { loadResources } from '../util/createCard'
-
-interface ICard {
-    face: string,
-    node: cc.Node,
-}
+import { loadResources } from '../../util/loadResources'
 
 export async function createCard({
     face,
-    node,
-}: ICard) {
+}) {
     // 创建mask节点并添加mask组件
     const maskNode = new cc.Node('card-mask');
     const maskCpt = maskNode.addComponent(cc.Mask);
@@ -73,19 +67,34 @@ export async function createCard({
 
 
     // 将mask元素加入节点中
-    maskNode.parent = node;
+    // maskNode.parent = node;
 
-    spriteNode.width = 60;
-    spriteNode.height = 60;
+    // spriteNode.width = 60;
+    // spriteNode.height = 60;
 
-    cardBodyNode.width = 90;
-    cardBodyNode.height = 130;
+    // cardBodyNode.width = 90;
+    // cardBodyNode.height = 130;
 
-    cardHpNode.width = 16;
-    cardHpNode.height = 16;
+    // cardHpNode.width = 16;
+    // cardHpNode.height = 16;
 
-    cardMpNode.width = 16;
-    cardMpNode.height = 16;
+    // cardMpNode.width = 16;
+    // cardMpNode.height = 16;
 
     return maskNode;
+}
+
+// 创建手牌容器
+export async function createCardHandContainer() {
+    const cardHandContainer = new cc.Node('card-hand-container');
+    const handContainerCpt = cardHandContainer.addComponent(cc.Sprite);
+    const handContainerWidget = cardHandContainer.addComponent(cc.Widget);
+    handContainerWidget.bottom = 300;
+    handContainerWidget.horizontalCenter = 100;
+    handContainerWidget.updateAlignment();
+    console.log(handContainerWidget)
+    // 加载spriteFrame资源
+    const cardBodyFrame = await loadResources('card/ui/hand-cards-container', cc.SpriteFrame);
+    handContainerCpt.spriteFrame = cardBodyFrame;    
+    return cardHandContainer;
 }

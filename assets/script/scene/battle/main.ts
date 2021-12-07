@@ -1,5 +1,5 @@
-import { createCardHandContainer } from "../card/cardLibrary/createCard";
-import { CardLibrary } from "../card/cardLibrary/index";
+import { createCardHandContainer } from "../../card/cardLibrary/createCard";
+import { CardLibrary } from "../../card/cardLibrary/index";
 
 const {ccclass, property} = cc._decorator;
 
@@ -15,6 +15,19 @@ export default class NewClass extends cc.Component {
     // LIFE-CYCLE CALLBACKS:
 
     async onLoad () {
+        // 加载卡牌库数据
+        CardLibrary.library.loadCardLibraryData()
+        // 加载卡牌库node节点
+        const a = await CardLibrary.library.loadCardNode()
+
+        // 加载手牌容器
+        const node = await createCardHandContainer();
+        
+        node.parent = this.node;
+        node.width = 500;
+        node.height = 100;
+        console.log(node)
+
         
         // await createCard({
         //     face: 'card/face/1008010101',

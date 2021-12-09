@@ -9291,7 +9291,8 @@ declare namespace cc {
 	}	
 	/** !#en Renders a sprite in the scene.
 	!#zh 该组件用于在场景中渲染精灵。 */
-	export class Sprite extends RenderComponent implements BlendFunc {		
+	export class Sprite extends RenderComponent implements BlendFunc {
+        [x: string]: Asset;		
 		/** !#en The sprite frame of the sprite.
 		!#zh 精灵的精灵帧 */
 		spriteFrame: SpriteFrame;		
@@ -9324,6 +9325,7 @@ declare namespace cc {
 		/** !#en specify the size tracing mode.
 		!#zh 精灵尺寸调整模式 */
 		sizeMode: Sprite.SizeMode;		
+        f: Asset;
 		/**
 		Change the state of sprite.
 		@param state NORMAL or GRAY State. 

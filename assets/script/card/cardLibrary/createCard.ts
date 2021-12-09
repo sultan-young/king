@@ -86,13 +86,9 @@ export async function createCard({
 
 // 创建手牌容器
 export async function createCardHandContainer() {
-    const cardHandContainer = new cc.Node('card-hand-container');
+    var cardHandContainer = new cc.Node('card-hand-container');
     const handContainerCpt = cardHandContainer.addComponent(cc.Sprite);
     const handContainerWidget = cardHandContainer.addComponent(cc.Widget);
-    handContainerWidget.bottom = 300;
-    handContainerWidget.horizontalCenter = 100;
-    handContainerWidget.updateAlignment();
-    console.log(handContainerWidget)
     // 加载spriteFrame资源
     const cardBodyFrame = await loadResources('card/ui/hand-cards-container', cc.SpriteFrame);
     handContainerCpt.spriteFrame = cardBodyFrame;    

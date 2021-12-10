@@ -1,5 +1,5 @@
-import { createCardHandContainer } from "../../card/cardLibrary/createCard";
-import { CardLibrary } from "../../card/cardLibrary/index";
+import { createCardHandContainer } from "../../framework/card-system/createCard";
+import { CardSystem } from "../../framework/card-system/index";
 
 const {ccclass, property} = cc._decorator;
 
@@ -16,9 +16,9 @@ export default class HeadArea extends cc.Component {
 
     async onLoad () {
         // 加载卡牌库数据
-        CardLibrary.library.loadCardLibraryData()
+        CardSystem.library.loadCardLibraryData()
         // 加载卡牌库node节点
-        const a = await CardLibrary.library.loadCardNode()
+        const a = await CardSystem.library.loadCardNode()
 
         this.node.setPosition(cc.v2(0, -cc.winSize.height / 2 + this.node.height / 2 + 0))
     }

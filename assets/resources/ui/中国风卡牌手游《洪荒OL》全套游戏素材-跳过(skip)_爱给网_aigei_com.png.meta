@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "f5f35c83-4eb5-45f1-90bf-9056e6101afd",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 94,
+  "height": 180,
+  "platformSettings": {},
+  "subMetas": {
+    "中国风卡牌手游《洪荒OL》全套游戏素材-跳过(skip)_爱给网_aigei_com": {
+      "ver": "1.0.6",
+      "uuid": "c1f93ed4-75a2-4bc2-af6c-e7b84b746605",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "f5f35c83-4eb5-45f1-90bf-9056e6101afd",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -1.5,
+      "offsetY": 0,
+      "trimX": 1,
+      "trimY": 0,
+      "width": 89,
+      "height": 180,
+      "rawWidth": 94,
+      "rawHeight": 180,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "4223db1f-648b-46dc-bee3-77170c419354",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 554,
+  "height": 306,
+  "platformSettings": {},
+  "subMetas": {
+    "卡牌手游《女神联盟》全套素材-战争聊天框(the_war_c_爱给网_aigei_com": {
+      "ver": "1.0.6",
+      "uuid": "1a606cad-fa5a-4e87-a879-c78e33e910fb",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "4223db1f-648b-46dc-bee3-77170c419354",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 554,
+      "height": 306,
+      "rawWidth": 554,
+      "rawHeight": 306,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

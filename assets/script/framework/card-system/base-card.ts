@@ -1,6 +1,6 @@
 import { card_type, ICard } from './constant';
 
-export class Card {
+export class BaseCard {
     private name: string; // 名称
     private hp: number; // 血量
     private atk: number; // 攻击力

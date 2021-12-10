@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "41336b94-9501-4b57-aca0-420f87d4d8d5",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 112,
+  "height": 124,
+  "platformSettings": {},
+  "subMetas": {
+    "三消卡牌手游《群侠传》完整源码-大盾(shield_larg_爱给网_aigei_com": {
+      "ver": "1.0.6",
+      "uuid": "919ce417-58a4-4c6b-b973-c550bd8a6edb",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "41336b94-9501-4b57-aca0-420f87d4d8d5",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 112,
+      "height": 124,
+      "rawWidth": 112,
+      "rawHeight": 124,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

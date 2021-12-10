@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "d23a2cd3-32dc-452a-b451-94fa06dbff55",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 115,
+  "height": 183,
+  "platformSettings": {},
+  "subMetas": {
+    "召唤那三国完整素材900多M-夏洛_1(xialuo_1)_爱给网_aigei_com": {
+      "ver": "1.0.6",
+      "uuid": "45662b4a-439e-4dc7-8f73-cac1b5a9a5cd",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "d23a2cd3-32dc-452a-b451-94fa06dbff55",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -17.5,
+      "trimX": 4,
+      "trimY": 35,
+      "width": 107,
+      "height": 148,
+      "rawWidth": 115,
+      "rawHeight": 183,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

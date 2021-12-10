@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "11ecc1e2-8b94-4890-82fe-9ac664394f25",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 480,
+  "height": 800,
+  "platformSettings": {},
+  "subMetas": {
+    "《英雄传奇》魔幻策略卡牌UI-bgbattle_爱给网_aigei_com": {
+      "ver": "1.0.6",
+      "uuid": "31cd90cd-e90c-465b-a4b9-efad153f940b",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "11ecc1e2-8b94-4890-82fe-9ac664394f25",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 480,
+      "height": 800,
+      "rawWidth": 480,
+      "rawHeight": 800,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

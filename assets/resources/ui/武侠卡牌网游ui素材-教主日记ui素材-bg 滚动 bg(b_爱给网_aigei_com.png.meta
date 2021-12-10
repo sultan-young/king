@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "1e0bd940-397a-4d2d-b0e7-654c3cdde2ac",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 549,
+  "height": 378,
+  "platformSettings": {},
+  "subMetas": {
+    "武侠卡牌网游ui素材-教主日记ui素材-bg 滚动 bg(b_爱给网_aigei_com": {
+      "ver": "1.0.6",
+      "uuid": "27598d47-5584-4ad7-949d-99a5044b9918",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "1e0bd940-397a-4d2d-b0e7-654c3cdde2ac",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 549,
+      "height": 378,
+      "rawWidth": 549,
+      "rawHeight": 378,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

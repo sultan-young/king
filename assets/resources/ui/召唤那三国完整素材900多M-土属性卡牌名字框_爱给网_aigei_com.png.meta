@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "e568c895-d347-4682-addf-fd682bec6f4d",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 249,
+  "height": 65,
+  "platformSettings": {},
+  "subMetas": {
+    "召唤那三国完整素材900多M-土属性卡牌名字框_爱给网_aigei_com": {
+      "ver": "1.0.6",
+      "uuid": "2d8fbe20-36eb-4662-9437-db767a4886ae",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "e568c895-d347-4682-addf-fd682bec6f4d",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0.5,
+      "trimX": 4,
+      "trimY": 0,
+      "width": 241,
+      "height": 64,
+      "rawWidth": 249,
+      "rawHeight": 65,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

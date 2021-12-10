@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "6ff0df65-56ed-43f1-9789-355c4b8b252a",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 1019,
+  "height": 690,
+  "platformSettings": {},
+  "subMetas": {
+    "《职业农场》全套场景素材-data-水平滚动(horizon_爱给网_aigei_com": {
+      "ver": "1.0.6",
+      "uuid": "5eb07eed-984b-4eb9-83dd-d72f67f8cd36",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "6ff0df65-56ed-43f1-9789-355c4b8b252a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1019,
+      "height": 690,
+      "rawWidth": 1019,
+      "rawHeight": 690,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

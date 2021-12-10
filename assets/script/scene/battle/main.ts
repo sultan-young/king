@@ -1,4 +1,4 @@
-import { CARD_CONFIG } from "../../card/cardLibrary/constant";
+import { CARD_CONFIG } from "../../framework/card-system/constant";
 
 const {ccclass, property} = cc._decorator;
 
@@ -15,24 +15,24 @@ export default class NewClass extends cc.Component {
     // LIFE-CYCLE CALLBACKS:
 
     async onLoad () {
-        const preHandArea = cc.instantiate(this.preHandArea);
-        let x = -300;
-        CARD_CONFIG.forEach( item => {
-            const preCard = cc.instantiate(this.preCard);
-            const preCardCpt = preCard.getComponent('pre-card');
-            preCardCpt.init({
-                hp: item.hp,
-                atk: item.atk,
-                portraitId: item.resourceId,
-            })
-            x += 90;
-            preHandArea.addChild(preCard)
-            preCard.x = x;
-            preCard.scale = 0.7;
+        // const preHandArea = cc.instantiate(this.preHandArea);
+        // let x = -300;
+        // CARD_CONFIG.forEach( item => {
+        //     const preCard = cc.instantiate(this.preCard);
+        //     const preCardCpt = preCard.getComponent('pre-card');
+        //     preCardCpt.init({
+        //         hp: item.hp,
+        //         atk: item.atk,
+        //         portraitId: item.resourceId,
+        //     })
+        //     x += 90;
+        //     preHandArea.addChild(preCard)
+        //     preCard.x = x;
+        //     preCard.scale = 0.7;
 
-        })
+        // })
         
-        this.node.addChild(preHandArea);
+        // this.node.addChild(preHandArea);
     }
     
     start () {

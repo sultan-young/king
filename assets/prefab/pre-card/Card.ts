@@ -1,4 +1,4 @@
-import { loadResources } from '../util/loadResources'
+import { loadResources } from '../../script/util/loadResources'
 
 const {ccclass, property} = cc._decorator;
 

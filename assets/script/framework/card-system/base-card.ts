@@ -7,6 +7,8 @@ export class BaseCard {
     private fee: number; // 费用
     private type: card_type;
     private resourceId?: string | number;
+    
+
     constructor(card: ICard) {
         this.name = card.name;
         this.hp = card.hp;
@@ -15,5 +17,6 @@ export class BaseCard {
         this.type = card.type;
         this.resourceId = card.resourceId;
     }
+    
 }
 

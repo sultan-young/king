@@ -18,11 +18,11 @@ export interface ICard {
 // 通过配置该表，可以直接生成对应的卡牌。
 export const CARD_CONFIG:Array<ICard> = [
     {
-        name: '小红',
+        name: '蓝龙',
         hp: 2,
         atk: 0,
         fee: 0,
-        resourceId: 1008010101,
+        resourceId: 1,
         type: card_type.beast,
         passiveSkillId: 10000,
         attackSkillId: 20000,
@@ -35,7 +35,7 @@ export const CARD_CONFIG:Array<ICard> = [
         type: card_type.beast,
         passiveSkillId: 10001,
         attackSkillId: 20001,
-        resourceId: 1009010101,
+        resourceId: 2,
     },
     {
         name: '螃蟹',
@@ -45,7 +45,7 @@ export const CARD_CONFIG:Array<ICard> = [
         type: card_type.beast,
         passiveSkillId: 10002,
         attackSkillId: 20002,
-        resourceId: 1010010101,
+        resourceId: 3,
     },
     {
         name: '德莱文',
@@ -55,7 +55,7 @@ export const CARD_CONFIG:Array<ICard> = [
         type: card_type.beast,
         passiveSkillId: 10003,
         attackSkillId: 20003,
-        resourceId: 1011010101,
+        resourceId: 4,
     },
     {
         name: '阿卡丽',
@@ -65,6 +65,6 @@ export const CARD_CONFIG:Array<ICard> = [
         type: card_type.beast,
         passiveSkillId: 10004,
         attackSkillId: 20004,
-        resourceId: 1011010102,
+        resourceId: 5,
     },
 ]

@@ -23,7 +23,6 @@ export default class NewClass extends cc.Component {
     onLoad () {
         this.node.width = 190;
         this.node.zIndex = 3000;
-        console.log(this.node)
         this.ani = this.node.getComponent(cc.Animation);
     }
     open() {
@@ -35,8 +34,6 @@ export default class NewClass extends cc.Component {
     }
 
     start () {
-        console.log(111)
-        
     }
 
     // update (dt) {}

@@ -1,36 +1,87 @@
-import { loadResources } from '../../script/util/loadResources'
+import animateSystem from '../../script/framework/animation-system';
+import { loadResources } from '../../script/util/loader/loadResources'
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class preCard extends cc.Component {
 
+    @property(cc.Prefab)
+    preMonster: cc.Prefab;
+
     hp: number = 1;
     atk: number = 1;
     portraitId: number = 0;
+    private startScale: number = 1;
+    public isChecked: boolean = false;
 
     async onLoad () {
-        const portraitSp = this.node.getChildByName('portrait').getComponent(cc.Sprite);
-        const spriteFrame =  await loadResources('card/face/' + this.portraitId, cc.SpriteFrame);
+        this.initRes();
+        this.updateSize();
+        this.startScale = this.node.scale;
 
-        portraitSp.spriteFrame = spriteFrame;
+        this.node.getNodeToParentTransform()
 
-        const hpLabel = cc.find('hp/hp', this.node).getComponent(cc.Label);
-        const atkLabel = cc.find('atk/atk', this.node).getComponent(cc.Label);
-        hpLabel.string = String(this.hp);
-        atkLabel.string = String(this.atk);
-
-        this.node.on(cc.Node.EventType.MOUSE_ENTER, (event) => {
-            this.node.scale = 2;
-        }, this);
-        this.node.on(cc.Node.EventType.MOUSE_LEAVE, (event) => {
-            this.node.scale = 1;
-        }, this);
+        this.node.on(cc.Node.EventType.MOUSE_ENTER, this.mouseEnter, this);
+        this.node.on(cc.Node.EventType.MOUSE_LEAVE, this.mouseLeave, this);
+        this.node.on(cc.Node.EventType.MOUSE_DOWN, this.mouseDown, this);
+        this.node.on(cc.Node.EventType.MOUSE_UP, this.mouseUp, this);
+        this.node.on(cc.Node.EventType.MOUSE_MOVE, this.mouseMove, this);
           
     }
 
     onDestroy() {
-       
+        this.node.off(cc.Node.EventType.MOUSE_ENTER, this.mouseEnter, this);
+        this.node.off(cc.Node.EventType.MOUSE_LEAVE, this.mouseLeave, this);
+        this.node.off(cc.Node.EventType.MOUSE_DOWN, this.mouseDown, this);
+        this.node.off(cc.Node.EventType.MOUSE_UP, this.mouseUp, this);
+        this.node.off(cc.Node.EventType.MOUSE_MOVE, this.mouseMove, this);
+    }
+
+    async initRes() {
+        const portraitSp = cc.find('body/portrait', this.node).getComponent(cc.Sprite);
+        const spriteFrame =  animateSystem.getPortrait(this.portraitId);
+        
+
+        portraitSp.spriteFrame = spriteFrame as cc.SpriteFrame;
+
+        const hpLabel = cc.find('body/hp/hp', this.node).getComponent(cc.Label);
+        const atkLabel = cc.find('body/atk/atk', this.node).getComponent(cc.Label);
+        hpLabel.string = String(this.hp);
+        atkLabel.string = String(this.atk);
+    }
+    // 将自身大小调整到手牌库的大小
+    updateSize() {
+        const scale = this.node.parent.height / this.node.height;
+        this.node.scale = scale;
+    }
+
+    mouseDown(event) {
+        this.isChecked = true;
+        this.node.scale = this.startScale;
+        const eventCustom = new cc.Event.EventCustom('createMonster', true)
+        eventCustom.setUserData({
+            node: this.node,
+            hp: this.hp,
+            atk: this.atk,
+            animationId: this.portraitId,
+        })
+        this.node.dispatchEvent(eventCustom)
+    }
+    
+    mouseUp() {
+        this.isChecked = false;
+    }
+
+    mouseMove() {
+
+    }
+
+    mouseEnter() {
+        this.node.scale = 1.5;
+    }
+    mouseLeave() {
+        this.node.scale = this.startScale;
     }
 
     init({hp, atk, portraitId}) {

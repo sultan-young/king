@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "hand-card-lib",
+    "_name": "card-pump",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
@@ -190,8 +190,6 @@
       "__id__": 1
     },
     "_enabled": true,
-    "label": null,
-    "text": "hello",
     "_id": ""
   },
   {

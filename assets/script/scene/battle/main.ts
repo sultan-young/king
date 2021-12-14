@@ -20,9 +20,6 @@ export default class NewClass extends cc.Component {
     @property(cc.Prefab)
     preMonster: cc.Prefab = null;
 
-    @property(cc.Prefab)
-    preVolumePump: cc.Prefab = null;
-
 
     // LIFE-CYCLE CALLBACKS:
 
@@ -31,12 +28,6 @@ export default class NewClass extends cc.Component {
         this.initEventListeners()
 
         
-        // 加载卷轴
-        // const preVolumePump = cc.instantiate(this.preVolumePump);
-        // this.node.addChild(preVolumePump);
-        // const preVolumePumpCpt = preVolumePump.getComponent('hand-card-lib');
-        // preVolumePumpCpt.open()
-
         // CardLibSystem.library.init();
         // CardLibSystem.library.loadCardLibraryData()
         // animateSystem.preLoadSpriteAtlas();

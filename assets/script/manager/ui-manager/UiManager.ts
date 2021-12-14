@@ -1,3 +1,4 @@
+import ComponentBase from "../../framework/message-system/componentBase";
 import ManagerBase from "../../framework/message-system/ManagerBase";
 import { MessageType } from "../../framework/message-system/message";
 
@@ -19,6 +20,13 @@ export default class UIManager extends ManagerBase {
     setMessageType() {
         return MessageType.BASE_TYPE.UI;
     }
+
+    // 注册组件消息
+    registerReceiver(component: ComponentBase) {
+        super.registerReceiver(component);
+    }
+
+    
 
     // receiveMessage() {
 

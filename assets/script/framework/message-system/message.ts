@@ -26,6 +26,8 @@ export namespace MessageType {
     export enum UI {
         // 显示手牌背景区域
         changeHandAreaShow,
+        // 打开/关闭卡牌库
+        updateCardPumpShow,
     }
     export enum Audio {
 

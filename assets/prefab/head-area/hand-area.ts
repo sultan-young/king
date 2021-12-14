@@ -1,7 +1,7 @@
 import { CardLibSystem } from "../../script/framework/card-system";
 import ComponentBase from "../../script/framework/message-system/componentBase";
 import Message, { MessageType } from "../../script/framework/message-system/message";
-import UIManager from "../../script/scene/battle/UiManager";
+import UIManager from "../../script/manager/ui-manager/UiManager";
 
 const {ccclass, property} = cc._decorator;
 
@@ -35,7 +35,7 @@ export default class HeadAreaControl extends ComponentBase {
             default:
                 break;
         }
-        console.log(msg, '手牌区域得到了消息')
+        // console.log(msg, '手牌区域得到了消息')
     }
     
     changeHandAreaShow(isShow: boolean) {

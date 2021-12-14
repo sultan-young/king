@@ -1,6 +1,6 @@
  export default class Message {
     // 类型
-    Type: number;
+    Type: MessageType.BASE_TYPE;
     // 命令
     Command: number;
     // 参数
@@ -9,15 +9,34 @@
     constructor(type, command, content) {
         this.Type = type;
         this.Command = command;
-        this.Command = content;
+        this.Content = content;
     }
  }
 
 export namespace MessageType {
+    export enum BASE_TYPE {
+        UI = 'UI',
+        Audio = 'Audio',
+        Animate = 'Animate',
+        Sprite = 'Sprite',
+        Npc = 'Npc',
+        Default = 'Default',
+    }
+
     export enum UI {
-        TYPE_UI,
-        TYPE_NPM,
-        TYPE_ENEMY,
-        TYPE_ANDIO,
+        // 显示手牌背景区域
+        changeHandAreaShow,
+    }
+    export enum Audio {
+
+    }
+    export enum Animate {
+
+    }
+    export enum Sprite {
+
+    }
+    export enum Npc {
+
     }
  }

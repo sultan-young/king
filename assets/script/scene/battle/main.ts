@@ -1,6 +1,8 @@
 import animateSystem from "../../framework/animation-system";
 import { CardLibSystem } from "../../framework/card-system";
 import { CARD_CONFIG } from "../../framework/card-system/constant";
+import ManagerCenter from "../../framework/message-system/ManagerCenter";
+import { MessageType } from "../../framework/message-system/message";
 import { loadResources } from '../../util/loader/loadResources'
 
 
@@ -35,26 +37,28 @@ export default class NewClass extends cc.Component {
         // const preVolumePumpCpt = preVolumePump.getComponent('hand-card-lib');
         // preVolumePumpCpt.open()
 
-        CardLibSystem.library.init();
-        CardLibSystem.library.loadCardLibraryData()
-        animateSystem.preLoadSpriteAtlas();
-        await animateSystem.loadSpriteFrameAtlas();
+        // CardLibSystem.library.init();
+        // CardLibSystem.library.loadCardLibraryData()
+        // animateSystem.preLoadSpriteAtlas();
+        // await animateSystem.loadSpriteFrameAtlas();
 
-        const preHandArea = cc.instantiate(this.preHandArea);
-        CARD_CONFIG.forEach( item => {
-            const preCard = cc.instantiate(this.preCard);
-            const preCardCpt = preCard.getComponent('Card');
-            preCardCpt.init({
-                hp: item.hp,
-                atk: item.atk,
-                portraitId: item.resourceId,
-            })
-            preHandArea.addChild(preCard)
-        })
+      
+
+        // const preHandArea = cc.instantiate(this.preHandArea);
+        // CARD_CONFIG.forEach( item => {
+        //     const preCard = cc.instantiate(this.preCard);
+        //     const preCardCpt = preCard.getComponent('Card');
+        //     preCardCpt.init({
+        //         hp: item.hp,
+        //         atk: item.atk,
+        //         portraitId: item.resourceId,
+        //     })
+        //     preHandArea.addChild(preCard)
+        // })
         
-        this.node.addChild(preHandArea);
+        // this.node.addChild(preHandArea);
 
-        console.log(this.preMonster, animateSystem.getLib())
+        // console.log(this.preMonster, animateSystem.getLib())
 
         // // 进行预加载
 
@@ -85,6 +89,8 @@ export default class NewClass extends cc.Component {
     }
 
     start () {
+        // 发送显示手牌区域的命令
+        ManagerCenter.sendCustomMessage(MessageType.BASE_TYPE.UI, MessageType.UI.changeHandAreaShow, true );
 
     }
 }

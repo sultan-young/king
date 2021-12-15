@@ -31,16 +31,15 @@ export default class NewClass extends ComponentBase {
     }
 
     updateCardPumpShow(Content) {
-        console.log(this.node.getChildByName('card-pump')?.active, this.node.children, '123123123')
+        const preVolumePump = this.node.getChildByName('card-pump');
+        const preVolumePumpCpt = preVolumePump.getComponent('card-pump');
         if (!this.node.getChildByName('card-pump')?.active) {
             // 加载卷轴
-            const preVolumePump = this.node.getChildByName('card-pump');
-            // this.node.addChild(preVolumePump);
             preVolumePump.active = true;
-            const preVolumePumpCpt = preVolumePump.getComponent('card-pump');
             preVolumePumpCpt.open()
         } else {
-
+            console.log(123123)
+            preVolumePumpCpt.close()
         }
         
 

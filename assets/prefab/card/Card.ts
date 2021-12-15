@@ -1,4 +1,4 @@
-import animateSystem from '../../script/framework/animation-system';
+import animateSystem from '../../script/framework/animation-system/animation';
 import { loadResources } from '../../script/util/loader/loadResources'
 
 const {ccclass, property} = cc._decorator;
@@ -7,7 +7,7 @@ const {ccclass, property} = cc._decorator;
 export default class preCard extends cc.Component {
 
     @property(cc.Prefab)
-    preMonster: cc.Prefab;
+    preMonster: cc.Prefab = null;
 
     hp: number = 1;
     atk: number = 1;

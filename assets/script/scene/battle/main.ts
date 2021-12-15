@@ -1,4 +1,4 @@
-import animateSystem from "../../framework/animation-system";
+import animateSystem from "../../framework/animation-system/animation";
 import { CardLibSystem } from "../../framework/card-system";
 import { CARD_CONFIG } from "../../framework/card-system/constant";
 import ManagerCenter from "../../framework/message-system/ManagerCenter";

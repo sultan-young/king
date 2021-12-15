@@ -1,4 +1,4 @@
-import animateSystem from "../../framework/animation-system";
+import animateSystem from "../../framework/animation-system/animation";
 
 const {ccclass, property} = cc._decorator;
 

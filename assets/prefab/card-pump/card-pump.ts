@@ -25,8 +25,8 @@ export default class CardPump extends cc.Component {
         this.ani = this.node.getComponent(cc.Animation);
         // 创建状态机
         this.fsmManager = new StateManager();
-        this.fsmManager.appendState(new CloseState(StateType.close, this, this.fsmManager));
-        this.fsmManager.appendState(new OpenState(StateType.open, this, this.fsmManager));
+        this.fsmManager.appendState(new CloseState(StateType.close, this.node, this.fsmManager));
+        this.fsmManager.appendState(new OpenState(StateType.open, this.node, this.fsmManager));
 
         // this.ani.on('finished', (e, animation) => {
         //     if(animation.name === 'card-pump-open') {

@@ -38,7 +38,6 @@ export default class NewClass extends ComponentBase {
             preVolumePump.active = true;
             preVolumePumpCpt.open()
         } else {
-            console.log(123123)
             preVolumePumpCpt.close()
         }
         

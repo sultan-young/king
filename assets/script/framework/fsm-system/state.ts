@@ -4,14 +4,14 @@ import StateManager from "./fsmManager";
 export default class FsmState  {
     // 状态ID
     stateId: number;
-    // 所属组件
-    component: cc.Component;
+    // 所属节点
+    node: cc.Node;
     // 所属有限状态机
     fsm: StateManager;
 
-    constructor(stateId: number, component: cc.Component, fsm: StateManager) {
+    constructor(stateId: number, node: cc.Node, fsm: StateManager) {
         this.stateId = stateId;
-        this.component = component;
+        this.node = node;
         this.fsm = fsm;
     }
     

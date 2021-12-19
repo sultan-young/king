@@ -1,20 +1,27 @@
+import { CARD_CONFIG } from "../../framework/card-system/constant";
 import ComponentBase from "../../framework/message-system/componentBase";
 import { MessageType } from "../../framework/message-system/message";
+import resourceSys from "../../framework/resource-system/resource";
 import UIManager from "./UiManager";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends ComponentBase {
+export default class Prefab extends ComponentBase {
 
     // 卡牌库
     @property(cc.Prefab)
     preCardPump: cc.Prefab = null;
 
+    // crad
+    @property(cc.Prefab)
+    preCard: cc.Prefab = null;
+
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
         UIManager.instance.registerReceiver(this);
+        this.loadCrad();
     }
 
     receiveMessage(msg) {
@@ -44,6 +51,18 @@ export default class NewClass extends ComponentBase {
 
     }
 
+    loadCrad() {
+        CARD_CONFIG.forEach( (item) => {
+            const preCard = cc.instantiate(this.preCard);
+            const preCardCpt = preCard.getComponent('Card');
+            preCardCpt.init({
+                hp: item.hp,
+                atk: item.atk,
+                portraitId: item.resourceId,
+            })
+            resourceSys.cardLib.setCardNode(item.resourceId, preCard);
+        })
+    }
     start () {
     }
 

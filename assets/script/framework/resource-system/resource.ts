@@ -1,7 +1,7 @@
 import CardLib from "./card/card";
 
 // 资源系统
-export default class ResourceSys {
+class ResourceSys {
     public cardLib: CardLib = new CardLib();
 
     start () {
@@ -10,3 +10,6 @@ export default class ResourceSys {
 
     // update (dt) {}
 }
+
+const resourceSys = new ResourceSys();
+export default resourceSys;

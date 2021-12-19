@@ -1,5 +1,4 @@
-import animateSystem from '../../script/framework/animation-system/animation';
-import { loadResources } from '../../script/util/loader/loadResources'
+import resourceSys from "../../script/framework/resource-system/resource";
 
 const {ccclass, property} = cc._decorator;
 
@@ -40,7 +39,7 @@ export default class preCard extends cc.Component {
 
     async initRes() {
         const portraitSp = cc.find('body/portrait', this.node).getComponent(cc.Sprite);
-        const spriteFrame =  animateSystem.getPortrait(this.portraitId);
+        const spriteFrame =  await resourceSys.cardLib.getCardFrame(this.portraitId + 1);
         
 
         portraitSp.spriteFrame = spriteFrame as cc.SpriteFrame;

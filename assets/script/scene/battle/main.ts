@@ -1,15 +1,17 @@
 import animateSystem from "../../framework/animation-system/animation";
+import BattleSys from "../../framework/battle-system/battle";
 import { CardLibSystem } from "../../framework/card-system";
 import { CARD_CONFIG } from "../../framework/card-system/constant";
 import ManagerCenter from "../../framework/message-system/ManagerCenter";
 import { MessageType } from "../../framework/message-system/message";
-import { loadResources } from '../../util/loader/loadResources'
+import BattleManger from "../../manager/battle-manager/battle-manager";
+import { loadResources } from '../../util/loader/loadResources';
 
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class Main extends cc.Component {
 
     @property(cc.Prefab)
     preHandArea: cc.Prefab = null;
@@ -22,10 +24,18 @@ export default class NewClass extends cc.Component {
 
 
     // LIFE-CYCLE CALLBACKS:
+    battleSys:BattleSys = null;
+
+    receiveMessage(msg) {
+        
+    }
 
     async onLoad () {
         // 开启事件监听器
-        this.initEventListeners()
+        this.initEventListeners();
+        BattleManger.instance.registerReceiver(this);
+        this.battleSys = new BattleSys();
+        this.battleSys.addHandCard([CARD_CONFIG[0], CARD_CONFIG[1]]);
 
         
         // CardLibSystem.library.init();
@@ -68,7 +78,6 @@ export default class NewClass extends cc.Component {
         atk,
         animationId,
     }) {
-        console.log(hp, atk, animationId)
         const preMonster = cc.instantiate(this.preMonster);
         const preMonsterCpt = preMonster.getComponent('monster');
         preMonsterCpt.setProperty({

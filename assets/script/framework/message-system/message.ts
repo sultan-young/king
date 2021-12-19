@@ -16,6 +16,7 @@
 export namespace MessageType {
     export enum BASE_TYPE {
         UI = 'UI',
+        Battle = 'Battle',
         Audio = 'Audio',
         Animate = 'Animate',
         Sprite = 'Sprite',
@@ -28,6 +29,13 @@ export namespace MessageType {
         changeHandAreaShow,
         // 打开/关闭卡牌库
         updateCardPumpShow,
+    }
+
+    export enum Battle {
+        // 添加手牌
+        addHandCard,
+        // 删除手牌
+        deleteHandCard,
     }
     export enum Audio {
 

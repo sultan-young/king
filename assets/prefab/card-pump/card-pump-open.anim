@@ -1,6 +1,6 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "volume-pump",
+  "_name": "card-pump-open",
   "_objFlags": 0,
   "_native": "",
   "_duration": 0.4,
@@ -19,6 +19,36 @@
           "value": 953
         }
       ]
+    },
+    "paths": {
+      "New Node": {
+        "props": {
+          "width": [
+            {
+              "frame": 0,
+              "value": 53
+            },
+            {
+              "frame": 0.4,
+              "value": 820
+            }
+          ]
+        }
+      },
+      "placeholder": {
+        "props": {
+          "width": [
+            {
+              "frame": 0,
+              "value": 40
+            },
+            {
+              "frame": 0.4,
+              "value": 683
+            }
+          ]
+        }
+      }
     }
   },
   "events": []

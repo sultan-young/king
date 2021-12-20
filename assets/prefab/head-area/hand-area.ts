@@ -1,7 +1,7 @@
 import { CardLibSystem } from "../../script/framework/card-system";
 import ComponentBase from "../../script/framework/message-system/componentBase";
 import Message, { MessageType } from "../../script/framework/message-system/message";
-import UIManager from "../../script/manager/ui-manager/UiManager";
+import BattleManger from "../../script/manager/battle-manager/battle-manager";
 
 const {ccclass, property} = cc._decorator;
 
@@ -13,7 +13,7 @@ export default class HeadAreaControl extends ComponentBase {
     // LIFE-CYCLE CALLBACKS:
 
     async onLoad () {
-        UIManager.instance.registerReceiver(this);
+        
 
         // let x = -100;
         // this.node.setPosition(cc.v2(0, -cc.winSize.height / 2))
@@ -31,7 +31,8 @@ export default class HeadAreaControl extends ComponentBase {
             case MessageType.UI.changeHandAreaShow:
                 this.changeHandAreaShow(Content);
                 break;
-        
+            case MessageType.Battle.addHandCard:
+                this.addHandCard(Content)
             default:
                 break;
         }
@@ -45,8 +46,12 @@ export default class HeadAreaControl extends ComponentBase {
             this.node.width = 0;
         }
     }
+    addHandCard(card) {
+        console.log(card)
+    }
     
     start () {
+        BattleManger.instance.registerReceiver(this);
     }
     // update (dt) {},
 }

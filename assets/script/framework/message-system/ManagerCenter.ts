@@ -1,15 +1,18 @@
-import ComponentBase from "./componentBase";
+import ManagerBase from "./ManagerBase";
 import Message, { MessageType } from "./message";
 
 export default class ManagerCenter {
     // 管理类列表
-    static Managers : ComponentBase[] = [];
+    static Managers : ManagerBase[] = [];
 
     // 发送消息
     static sendMessage(msg: Message) {
-        ManagerCenter.Managers.forEach(manager=> {
-            manager.receiveMessage(msg)
-        })
+        const targetManager = ManagerCenter.Managers.find(manager => manager.BaseMessageType === msg.Type)
+        if (!targetManager) {
+            throw new Error(`未找到对应消息类型${msg}`);
+            
+        }
+        targetManager.receiveMessage(msg);
     }
 
     // 发送消息

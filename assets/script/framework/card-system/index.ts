@@ -28,15 +28,6 @@ export class CardLibSystem {
         })
     }
 
-    // 打开卡牌库
-    public openCardPool() {
-        
-    }
-
-    public async loadCardNode() {
-        
-    }
-
     // 向卡池添加卡
     public appendCard(card) {
         this.cardPool.push(card);

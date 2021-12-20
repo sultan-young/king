@@ -1,0 +1,22 @@
+{
+  "name": "king",
+  "version": "1.0.0",
+  "description": "// 卡牌的种类\r 人类 => 野兽 => 鬼怪 => 人类",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yzl1050462990/king.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yzl1050462990/king/issues"
+  },
+  "homepage": "https://github.com/yzl1050462990/king#readme",
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}

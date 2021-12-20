@@ -7,7 +7,6 @@ import { MessageType } from "../../framework/message-system/message";
 import BattleManger from "../../manager/battle-manager/battle-manager";
 import { loadResources } from '../../util/loader/loadResources';
 
-
 const {ccclass, property} = cc._decorator;
 
 @ccclass
@@ -33,9 +32,8 @@ export default class Main extends cc.Component {
     async onLoad () {
         // 开启事件监听器
         this.initEventListeners();
-        BattleManger.instance.registerReceiver(this);
-        this.battleSys = new BattleSys();
-        this.battleSys.addHandCard([CARD_CONFIG[0], CARD_CONFIG[1]]);
+        // BattleManger.instance.registerReceiver(this);
+        
 
         
         // CardLibSystem.library.init();
@@ -44,19 +42,6 @@ export default class Main extends cc.Component {
         // await animateSystem.loadSpriteFrameAtlas();
 
       
-
-        // const preHandArea = cc.instantiate(this.preHandArea);
-        // CARD_CONFIG.forEach( item => {
-        //     const preCard = cc.instantiate(this.preCard);
-        //     const preCardCpt = preCard.getComponent('Card');
-        //     preCardCpt.init({
-        //         hp: item.hp,
-        //         atk: item.atk,
-        //         portraitId: item.resourceId,
-        //     })
-        //     preHandArea.addChild(preCard)
-        // })
-        
         // this.node.addChild(preHandArea);
 
         // console.log(this.preMonster, animateSystem.getLib())
@@ -89,8 +74,15 @@ export default class Main extends cc.Component {
     }
 
     start () {
-        // 发送显示手牌区域的命令
-        ManagerCenter.sendCustomMessage(MessageType.BASE_TYPE.UI, MessageType.UI.changeHandAreaShow, true );
+        this.battleSys = new BattleSys();
+        const card = this.battleSys.getRandomCard()
+        console.log(card)
 
+        // 发送显示手牌区域的命令
+        // ManagerCenter.sendCustomMessage(MessageType.BASE_TYPE.UI, MessageType.UI.changeHandAreaShow, true );
+        setTimeout(() => {
+        ManagerCenter.sendCustomMessage(MessageType.BASE_TYPE.Battle, MessageType.Battle.addHandCard, card);
+            
+        }, 2000);
     }
 }

@@ -1,5 +1,5 @@
 import { card_type, ICard } from './constant';
-
+import { v4 as uuidv4 } from 'uuid';
 export class BaseCard {
     private name: string; // 名称
     private hp: number; // 血量
@@ -7,6 +7,7 @@ export class BaseCard {
     private fee: number; // 费用
     private type: card_type;
     private resourceId?: string | number;
+    private uuid: string;
     
 
     constructor(card: ICard) {
@@ -16,6 +17,11 @@ export class BaseCard {
         this.fee = card.fee;
         this.type = card.type;
         this.resourceId = card.resourceId;
+        this.init()
+    }
+    init() {
+        this.uuid = uuidv4();
+        
     }
     
 }

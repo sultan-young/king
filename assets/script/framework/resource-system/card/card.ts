@@ -16,20 +16,27 @@ class CardLib {
     }
 
     // 加载卡牌资源
-    async getCardFrame(id) {
-        if (this.cardLib.get(id)) {
-            return this.cardLib.get(id);
-        }
+    async loadCardFrame(ids: (Array<number> | number)) {
+        
         try {
-            const faceFrame = await loadResources({
-                method: 'load',
-                url: `${baseUrl}/${id}/face`,
-                type: cc.SpriteFrame,
-            }) as cc.SpriteFrame;
-
-    
-            this.cardLib.set(id, faceFrame);
-            return faceFrame;
+            if (typeof ids === 'object') {
+                ids.forEach(async (id) => {
+                    const faceFrame = await loadResources({
+                        method: 'load',
+                        url: `${baseUrl}/${id}/face`,
+                        type: cc.SpriteFrame,
+                    }) as cc.SpriteFrame;
+                    this.cardLib.set(id, faceFrame);
+                })
+            } else {
+                const faceFrame = await loadResources({
+                    method: 'load',
+                    url: `${baseUrl}/${ids}/face`,
+                    type: cc.SpriteFrame,
+                }) as cc.SpriteFrame;
+                this.cardLib.set(ids, faceFrame);
+            }
+            
         } catch (error) {
             throw new Error("卡牌资源加载出错");
         }

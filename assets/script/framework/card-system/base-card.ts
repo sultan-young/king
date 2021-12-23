@@ -6,8 +6,8 @@ export class BaseCard {
     private atk: number; // 攻击力
     private fee: number; // 费用
     private type: card_type;
-    private resourceId?: string | number;
-    private uuid: string;
+    public resourceId?: number;
+    public uuid: string;
     
 
     constructor(card: ICard) {
@@ -21,7 +21,6 @@ export class BaseCard {
     }
     init() {
         this.uuid = uuidv4();
-        
     }
     
 }

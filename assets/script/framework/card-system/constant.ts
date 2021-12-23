@@ -10,7 +10,7 @@ export interface ICard {
     atk: number, // 攻击力
     fee: number, // 费用
     type: card_type,
-    resourceId?: string | number,
+    resourceId?: number,
     passiveSkillId?: number, // 被动技能
     attackSkillId?: number, // 主动技能
 }

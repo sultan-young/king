@@ -16,26 +16,32 @@
 export namespace MessageType {
     export enum BASE_TYPE {
         UI = 'UI',
-        Battle = 'Battle',
+        Game = 'Game',
+        Resource = 'Resource',
         Audio = 'Audio',
         Animate = 'Animate',
         Sprite = 'Sprite',
         Npc = 'Npc',
+        Scene = 'Scene',
         Default = 'Default',
     }
 
     export enum UI {
         // 显示手牌背景区域
-        changeHandAreaShow,
+        changeHandAreaShow = 10000,
         // 打开/关闭卡牌库
         updateCardPumpShow,
     }
 
-    export enum Battle {
+    export enum Game {
         // 添加手牌
-        addHandCard,
+        addHandCard = 20000,
         // 删除手牌
         deleteHandCard,
+    }
+    export enum Resource {
+        // 预加载资源,当前只包括加载卡牌资源
+        preLoadCardLib = 30000,
     }
     export enum Audio {
 
@@ -48,5 +54,8 @@ export namespace MessageType {
     }
     export enum Npc {
 
+    }
+    export enum Scene {
+        
     }
  }

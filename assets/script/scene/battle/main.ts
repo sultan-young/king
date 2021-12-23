@@ -1,11 +1,6 @@
-import animateSystem from "../../framework/animation-system/animation";
-import BattleSys from "../../framework/battle-system/battle";
-import { CardLibSystem } from "../../framework/card-system";
-import { CARD_CONFIG } from "../../framework/card-system/constant";
+import game from "../../framework/game-system/game";
 import ManagerCenter from "../../framework/message-system/ManagerCenter";
 import { MessageType } from "../../framework/message-system/message";
-import BattleManger from "../../manager/battle-manager/battle-manager";
-import { loadResources } from '../../util/loader/loadResources';
 
 const {ccclass, property} = cc._decorator;
 
@@ -22,8 +17,6 @@ export default class Main extends cc.Component {
     preMonster: cc.Prefab = null;
 
 
-    // LIFE-CYCLE CALLBACKS:
-    battleSys:BattleSys = null;
 
     receiveMessage(msg) {
         
@@ -32,6 +25,8 @@ export default class Main extends cc.Component {
     async onLoad () {
         // 开启事件监听器
         this.initEventListeners();
+        // 发送加载卡牌资源命令
+        ManagerCenter.sendCustomMessage(MessageType.BASE_TYPE.Resource, MessageType.Resource.preLoadCardLib);
         // BattleManger.instance.registerReceiver(this);
         
 
@@ -74,14 +69,13 @@ export default class Main extends cc.Component {
     }
 
     start () {
-        this.battleSys = new BattleSys();
-        const card = this.battleSys.getRandomCard()
+        const card = game.getRandomCard()
         console.log(card)
 
         // 发送显示手牌区域的命令
         // ManagerCenter.sendCustomMessage(MessageType.BASE_TYPE.UI, MessageType.UI.changeHandAreaShow, true );
         setTimeout(() => {
-        ManagerCenter.sendCustomMessage(MessageType.BASE_TYPE.Battle, MessageType.Battle.addHandCard, card);
+        ManagerCenter.sendCustomMessage(MessageType.BASE_TYPE.Game, MessageType.Game.addHandCard, card);
             
         }, 2000);
     }

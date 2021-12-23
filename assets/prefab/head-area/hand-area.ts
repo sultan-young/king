@@ -1,7 +1,7 @@
-import { CardLibSystem } from "../../script/framework/card-system";
 import ComponentBase from "../../script/framework/message-system/componentBase";
 import Message, { MessageType } from "../../script/framework/message-system/message";
-import BattleManger from "../../script/manager/battle-manager/battle-manager";
+import resourceSys from "../../script/framework/resource-system/resource";
+import GameManger from "../../script/manager/game-manager/game-manager";
 
 const {ccclass, property} = cc._decorator;
 
@@ -31,12 +31,11 @@ export default class HeadAreaControl extends ComponentBase {
             case MessageType.UI.changeHandAreaShow:
                 this.changeHandAreaShow(Content);
                 break;
-            case MessageType.Battle.addHandCard:
+            case MessageType.Game.addHandCard:
                 this.addHandCard(Content)
             default:
                 break;
         }
-        // console.log(msg, '手牌区域得到了消息')
     }
     
     changeHandAreaShow(isShow: boolean) {
@@ -47,11 +46,11 @@ export default class HeadAreaControl extends ComponentBase {
         }
     }
     addHandCard(card) {
-        console.log(card)
+        console.log(card, resourceSys.cardLib)
     }
     
     start () {
-        BattleManger.instance.registerReceiver(this);
+        GameManger.instance.registerReceiver(this);
     }
     // update (dt) {},
 }

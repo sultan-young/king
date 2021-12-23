@@ -16,7 +16,7 @@ export default class ManagerCenter {
     }
 
     // 发送消息
-    static sendCustomMessage(type: MessageType.BASE_TYPE, command: number, content: any) {
+    static sendCustomMessage(type: MessageType.BASE_TYPE, command: number, content?: any) {
         let msg = new Message(type, command, content);
         ManagerCenter.sendMessage(msg);
     }

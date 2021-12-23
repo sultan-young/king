@@ -39,7 +39,7 @@ export default class preCard extends cc.Component {
 
     async initRes() {
         const portraitSp = cc.find('body/portrait', this.node).getComponent(cc.Sprite);
-        const spriteFrame =  await resourceSys.cardLib.getCardFrame(this.portraitId + 1);
+        // const spriteFrame =  await resourceSys.cardLib.getCardFrame(this.portraitId + 1);
         
 
         portraitSp.spriteFrame = spriteFrame as cc.SpriteFrame;

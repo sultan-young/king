@@ -69,7 +69,7 @@ export default class Main extends cc.Component {
     }
 
     start () {
-        const card = game.getRandomCard()
+        const card = game.getRandomCard() 
         console.log(card)
 
         // 发送显示手牌区域的命令

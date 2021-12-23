@@ -56,7 +56,7 @@ export default class Main extends cc.Component {
     createMonster({
         hp,
         atk,
-        animationId,
+        animationId, 
     }) {
         const preMonster = cc.instantiate(this.preMonster);
         const preMonsterCpt = preMonster.getComponent('monster');

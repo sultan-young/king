@@ -5,6 +5,11 @@ export default class ManagerCenter {
     // 管理类列表
     static Managers : ManagerBase[] = [];
 
+    // 添加管理者
+    static appendManager(manager: ManagerBase) {
+        ManagerCenter.Managers.push(manager);
+    }
+
     // 发送消息
     static sendMessage(msg: Message) {
         const targetManager = ManagerCenter.Managers.find(manager => manager.BaseMessageType === msg.Type)

@@ -2,6 +2,7 @@ import ComponentBase from "../../script/framework/message-system/componentBase";
 import Message, { MessageType } from "../../script/framework/message-system/message";
 import resourceSys from "../../script/framework/resource-system/resource";
 import GameManger from "../../script/manager/game-manager/game-manager";
+import ViewManager from "../../script/manager/view-manager/view-manager";
 
 const {ccclass, property} = cc._decorator;
 
@@ -13,7 +14,8 @@ export default class HeadAreaControl extends ComponentBase {
     // LIFE-CYCLE CALLBACKS:
 
     async onLoad () {
-        
+        GameManger.instance.registerReceiver(this);
+        ViewManager.instance.registerReceiver(this);
 
         // let x = -100;
         // this.node.setPosition(cc.v2(0, -cc.winSize.height / 2))
@@ -31,7 +33,7 @@ export default class HeadAreaControl extends ComponentBase {
             case MessageType.UI.changeHandAreaShow:
                 this.changeHandAreaShow(Content);
                 break;
-            case MessageType.Game.addHandCard:
+            case MessageType.View.addHandCard:
                 this.addHandCard(Content)
             default:
                 break;
@@ -46,11 +48,11 @@ export default class HeadAreaControl extends ComponentBase {
         }
     }
     addHandCard(card) {
-        console.log(card, resourceSys.cardLib)
+        console.log(card, resourceSys.cardLib, 111)
     }
     
     start () {
-        GameManger.instance.registerReceiver(this);
+        
     }
     // update (dt) {},
 }

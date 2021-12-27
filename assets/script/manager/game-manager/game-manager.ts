@@ -6,10 +6,10 @@ import { MessageType } from "../../framework/message-system/message";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class ResManager extends ManagerBase {
+export default class GameManager extends ManagerBase {
 
     // 大管理类必须是单例
-    static instance: ResManager;
+    static instance: GameManager;
 
     // LIFE-CYCLE CALLBACKS:
 
@@ -17,8 +17,7 @@ export default class ResManager extends ManagerBase {
         super.onLoad();
         // 初始化卡牌库
         game.initCardLib();
-        console.log(123123123)
-        ResManager.instance = this;
+        GameManager.instance = this;
         // 如果单个管理者，则将自己直接注册到管理中心
         this.registerReceiver(this);
     }

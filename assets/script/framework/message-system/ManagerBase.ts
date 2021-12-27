@@ -12,7 +12,7 @@ export default class ManagerBase extends ComponentBase {
         // 设置当前管理类接受的消息类型
         this.BaseMessageType = this.setMessageType();
         // 把管理类添加到消息中心列表
-        ManagerCenter.Managers.push(this);
+        ManagerCenter.appendManager(this);
     }
 
     // 设置当前管理类的消息类型

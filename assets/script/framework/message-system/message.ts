@@ -23,6 +23,7 @@ export namespace MessageType {
         Sprite = 'Sprite',
         Npc = 'Npc',
         Scene = 'Scene',
+        View = 'View',
         Default = 'Default',
     }
 
@@ -33,11 +34,14 @@ export namespace MessageType {
         updateCardPumpShow,
     }
 
-    export enum Game {
+    export enum View {
         // 添加手牌
         addHandCard = 20000,
         // 删除手牌
         deleteHandCard,
+    }
+    export enum Game {
+        
     }
     export enum Resource {
         // 预加载资源,当前只包括加载卡牌资源

@@ -25,7 +25,6 @@ export default class Prefab extends ComponentBase {
     }
 
     receiveMessage(msg) {
-        console.log(msg, 'msg')
         super.receiveMessage(msg);
         const { Command, Content } = msg;
         switch (Command) {

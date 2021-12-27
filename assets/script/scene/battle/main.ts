@@ -75,7 +75,7 @@ export default class Main extends cc.Component {
         // 发送显示手牌区域的命令
         // ManagerCenter.sendCustomMessage(MessageType.BASE_TYPE.UI, MessageType.UI.changeHandAreaShow, true );
         setTimeout(() => {
-        ManagerCenter.sendCustomMessage(MessageType.BASE_TYPE.Game, MessageType.Game.addHandCard, card);
+        ManagerCenter.sendCustomMessage(MessageType.BASE_TYPE.View, MessageType.View.addHandCard, card);
             
         }, 2000);
     }
